@@ -52,6 +52,9 @@ public class main implements ModInitializer {
         RegionProtectionCommand.register();
         RegionProtectionEvents.register();
         
+        // Register the skip night vote command
+        SkipNightVoteCommand.register();
+        
         // Register existing greet command
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
             dispatcher.register(CommandManager.literal("greet")
@@ -64,6 +67,6 @@ public class main implements ModInitializer {
                     })));
         });
         
-        LOGGER.info("StarkRealm-Essentials loaded with region protection.");
+        LOGGER.info("StarkRealm-Essentials loaded with region protection and skip night vote.");
     }
 }
