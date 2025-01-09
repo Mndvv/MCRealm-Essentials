@@ -82,7 +82,7 @@ public class SkipNightVoteCommand {
             // Broadcast vote start
             source.getServer().getPlayerManager().broadcast(
                 Text.literal(String.format("%s started a vote to skip night/storm! Use /skipnight to vote", 
-                    player.getName().getString())), false);
+                    player.getName().getString())), true);
             
             // Start vote timeout thread
             new Thread(() -> {
